@@ -510,14 +510,7 @@ footer {
     position: relative;
     margin-top: -1px;
     background-color: #343d68;
-    padding: 5rem;
-}
-
-footer {
-    position: relative;
-    margin-top: -1px;
-    background-color: #343d68;
-    padding: 2rem 0; /* Adjusted padding */
+    padding: 2rem 0;
 }
 
 .footer-section {
@@ -528,10 +521,9 @@ footer {
 }
 
 .profile-name {
-    /* Removed absolute positioning to align with other items */
     color: #535c87;
     user-select: none;
-    font-size: 2rem; /* Adjusted font size */
+    font-size: 2rem;
     font-weight: 600;
 }
 
@@ -549,7 +541,6 @@ footer {
 .footer-text a:hover {
     color: var(--button-color);
 }
-
 
 .footer-social-icon {
     display: flex;
@@ -649,5 +640,167 @@ footer {
     100% {
         transform: translateX(0);
         opacity: 1;
+    }
+}
+
+
+/* ================================== */
+/* MEDIA QUERIES FOR RESPONSIVENESS   */
+/* ================================== */
+
+/* Laptops and Large Tablets */
+@media (max-width: 1200px) {
+  .container {
+    width: 95%;
+  }
+  .faded-name {
+    font-size: 6rem;
+  }
+  .skills-container {
+    padding: 5rem 2rem;
+  }
+  .faded-skill-text {
+    font-size: 12em;
+  }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .nav-items {
+    display: none;
+  }
+  .header-container {
+    flex-direction: column;
+    gap: 3rem;
+    margin: 2rem auto;
+    padding: 2rem 0;
+    align-items: center;
+    text-align: center;
+  }
+  .left-text-para p:last-of-type {
+    width: 100%;
+  }
+  .faded-name, .faded-skill-text {
+    display: none;
+  }
+  .right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .user-img {
+    width: 320px;
+    height: 420px;
+  }
+  .projects-heading {
+    font-size: 60px;
+  }
+  .all-projects {
+    gap: 80px;
+  }
+  .project-card {
+    width: 100%;
+    height: auto;
+    margin: 0 !important;
+    animation-name: none !important; /* Disable slide-in on tablets */
+    opacity: 1;
+  }
+  .skills-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .skills-text, .skills-skills-img {
+    width: 100%;
+  }
+  .skills-para p {
+    width: 100%;
+  }
+  .contact-heading h1 {
+    font-size: 3em;
+  }
+  .contact-heading p {
+    font-size: 2rem;
+  }
+  .contact-input-form {
+    width: 90%;
+    margin: 2rem auto;
+  }
+  .footer-section {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 768px) {
+  .header-container {
+    margin: 1rem auto;
+    padding-bottom: 4rem;
+  }
+  .left-text-para {
+    font-size: 28px;
+  }
+  .projects-heading, .skills-heading {
+    font-size: 50px;
+  }
+  .skills-heading span {
+    font-size: 70px;
+  }
+  .all-projects {
+    padding: 2rem 0;
+  }
+  .project-content {
+    padding: 1.5em 2em;
+  }
+  .project-title {
+    font-size: 35px;
+  }
+  .project-description {
+    width: 100%;
+    font-size: 14px;
+  }
+  .skills-container {
+    margin: 5rem auto;
+    padding: 3rem 1rem;
+  }
+  .skills-language-logo {
+    width: 60px;
+  }
+  .contact-heading p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+    .left-text-para {
+        font-size: 24px;
+    }
+    .user-img {
+        width: 280px;
+        height: 380px;
+    }
+    .projects-heading, .skills-heading {
+        font-size: 40px;
+    }
+    .skills-heading span {
+        font-size: 60px;
+    }
+    .project-title {
+        font-size: 28px;
+    }
+    .project-skill-icon {
+        width: 30px;
+        height: 30px;
+    }
+    .contact-heading h1 {
+        font-size: 2.5em;
+    }
+    .contact-heading p {
+        font-size: 1.2rem;
+    }
+    .contact-input-form {
+        width: 100%;
+        margin: 2rem 0;
     }
 }
